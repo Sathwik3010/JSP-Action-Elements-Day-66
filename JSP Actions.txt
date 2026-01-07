@@ -1,0 +1,86 @@
+
+							JSP Elements
+							     |
+							     |
+               |---------------------------------------------|-------------------------------------------------|
+	JSP Directives                                Scripting  elements                                 JSP actions
+	       |                                             |                                                 |
+page        Include    Taglib                                |                                                 |
+directive    directive   directive                           |	                              standard actions     custom actions
+					declarations    scriplets     expressions
+
+JSP Actions
+-----------
+in jsp technologies by using scripting elements we are able to provide java code inside the jsp pages, but the main theme of JSP technology is not to allow java code inside jsp pages.
+
+to eliminate java code from jsp pages we have to eliminate scripting elements from jsp pages we have to provide an alternative way i.e JSP Actions.
+
+in case of a JSP actions we will define a scripting tag in jsp page and we will provide a block of java code w.r.t scripting tag.
+
+in jsp technology there are 2 types of actions.
+1. Standard Actions
+-------------------
+Standard Actions are JSP Actions which could be defined by jsp technology to perform a particular action.
+
+jsp technology has provided all the standard actions in the form of 12 predefined tags is called JSP Actions.
+
+<jsp:useBean>
+<jsp:setProperty>
+<jsp:getProperty>
+-----------------
+<jsp:include>
+<jsp:forward>
+<jsp:param>
+-----------------
+<jsp:plugin>
+<jsp:fallback> // these 3rd set are outdated category not in use
+<jsp:params>
+-----------------
+<jsp:declaration>
+<jsp:scriptlet>
+<jsp:expression>
+------------------------------------------------------------------------
+
+1) <jsp:useBean>
+----------------
+the main purpose of <jsp:useBean> tag is to interact with bean Object from a particular jsp page.
+
+<jsp:useBean id="---" class="----" type="----"/>
+
+where id attribute will take a variable to manage generated bean object reference. where class attribute will able to take a fully qualified name off the bean class.
+where type attribute will take the fully qualified name of bean class to define the type of variable in order to manage bean Object reference.
+
+2) <jsp:setProperty>
+-------------------
+the main purpose of <jsp:setProperty> tag is to execute a particular setter method in order to set a value to a particular bean property.
+<jsp:setProperty name="---" property="-----" value="-----"/>
+
+where name attribute will take a variable which is same as id attribute value in <jsp:useBean> tag.
+where property attribute will take a property name in order to access the respective setter method.
+where value attribute will take a value to pass as a parameter to respective setter method.
+
+3) <jsp:getProperty>
+--------------------
+the main purpose of <jsp:getProperty> tag is to execute a particular getter method in order to get a value to a particular bean property.
+<jsp:getProperty name="---" property="-----" value="-----"/>
+
+where name attribute will take a variable which is same as id attribute value in <jsp:useBean> tag.
+where property attribute will take a property name in order to access the respective getter method.
+where value attribute will take a value to pass as a parameter to respective getter method.
+
+4) <jsp:include>
+----------------
+
+10) <jsp.declaration>
+-----------------java declaration</jsp:declaration>
+
+11) <jsp:scriptlet>
+-----------------block of java code------
+</jsp:scriptlet>
+
+12) <jsp:expression>
+--------------------java expression-------
+</jsp:expression>
+
+2. Custom Actions
+------------------
